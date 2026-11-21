@@ -35,3 +35,75 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+/* ---------- Hero animated background ---------- */
+.hero-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(48px);
+  opacity: 0.55;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-blob-1 {
+  width: 22rem;
+  height: 22rem;
+  left: -6rem;
+  top: -6rem;
+  background: #5eead4;
+  animation: blob-a 14s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+  width: 18rem;
+  height: 18rem;
+  right: -4rem;
+  top: 2rem;
+  background: #fde68a;
+  animation: blob-b 18s ease-in-out infinite;
+}
+
+.hero-blob-3 {
+  width: 20rem;
+  height: 20rem;
+  right: 25%;
+  bottom: -10rem;
+  background: #99f6e4;
+  animation: blob-c 16s ease-in-out infinite;
+}
+
+@keyframes blob-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.15); }
+}
+
+@keyframes blob-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-70px, 50px) scale(1.2); }
+}
+
+@keyframes blob-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, -50px) scale(1.1); }
+}
+
+.hero-enter {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.hero-enter-delay {
+  animation-delay: 0.15s;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* No motion for people who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob,
+  .hero-enter {
+    animation: none !important;
+  }
+}

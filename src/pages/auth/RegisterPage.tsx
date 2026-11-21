@@ -1,5 +1,5 @@
-import PageStub from '../../components/ui/PageStub'
+import AuthPage from './AuthPage'
 
 export default function RegisterPage() {
-  return <PageStub title="Create your account" />
+  return <AuthPage mode="register" />
 }

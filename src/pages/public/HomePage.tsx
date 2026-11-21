@@ -22,12 +22,15 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-brand-50">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
-          <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-brand-900 sm:text-5xl">
+      <section className="relative overflow-hidden bg-brand-50">
+        <div aria-hidden="true" className="hero-blob hero-blob-1" />
+        <div aria-hidden="true" className="hero-blob hero-blob-2" />
+        <div aria-hidden="true" className="hero-blob hero-blob-3" />
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <h1 className="hero-enter max-w-2xl text-4xl font-bold tracking-tight text-brand-900 sm:text-5xl">
             Find your next opportunity
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-700">
+          <p className="hero-enter hero-enter-delay mt-4 max-w-2xl text-lg text-slate-700">
             Jobs, internships, scholarships, training and more for young people in Rwanda, all in one
             place.
           </p>

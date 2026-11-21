@@ -1,5 +1,5 @@
-import PageStub from '../../components/ui/PageStub'
+import AuthPage from './AuthPage'
 
 export default function LoginPage() {
-  return <PageStub title="Log in" />
+  return <AuthPage mode="login" />
 }
